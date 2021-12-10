@@ -1,0 +1,32 @@
+<!-- livebook:{"persist_outputs":true} -->
+
+# Chapter 1 - Stream live cryptocurrency prices from the Binance WSS
+
+## 1.1 Objectives
+
+* create a new umbrella app
+* create a supervised application inside an umbrella
+* connect to Binance’s WebSocket Stream using the WebSockex module
+* define a TradeEvent struct that will hold incoming data
+* decode incoming events using the Jason module
+
+## 1.2 Create a new umbrella app
+
+As we are starting from scratch, we need to create a new umbrella project:
+
+```bash
+mix new hedgehog --umbrella
+```
+
+## 1.3 Create a supervised application inside an umbrella
+
+We can now proceed with creating a new supervised application called `streamer` inside our umbrella:
+
+```
+cd hedgehog/apps
+mix new streamer --sup
+```
+
+## 1.4 Connect to Binance’s WebSocket Stream using the WebSockex module
+
+
